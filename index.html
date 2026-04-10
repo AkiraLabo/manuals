@@ -11,7 +11,7 @@
         ul { list-style: none; padding: 0; }
         li { margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         
-        /* 連結容器：確保圖示與文字水平對齊 */
+        /* 內文連結 (18px) */
         a { 
             text-decoration: none; 
             color: #007aff; 
@@ -22,15 +22,25 @@
         }
         a:hover { color: #0056b3; }
 
-        /* 圖示專用樣式 */
         .dev-icon {
-            width: 30px;      /* 設定統一寬度 */
-            height: 30px;     /* 設定統一高度 */
-            margin-right: 12px; /* 圖示與文字的間距 */
-            object-fit: contain; /* 確保圖片比例正常，不被擠壓 */
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+            object-fit: contain;
         }
 
-        .category { font-weight: bold; color: #888; font-size: 13px; margin-top: 20px; text-transform: uppercase; border-left: 4px solid #007aff; padding-left: 8px; }
+        /* --- 分類標題微調部分 --- */
+        .category { 
+            font-weight: bold;      /* 設定為粗體 */
+            color: #000;            /* 設定為純黑色 */
+            font-size: 22px;        /* 比內文 18px 大 4px */
+            margin-top: 30px;       /* 增加上方間距，讓區隔更明顯 */
+            margin-bottom: 10px;    /* 稍微拉開與下方列表的距離 */
+            border-left: 6px solid #007aff; /* 加厚左側裝飾線 */
+            padding-left: 10px; 
+            display: flex;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
