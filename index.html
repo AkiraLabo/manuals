@@ -3,37 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>家務設備說明書庫</title>
+    <title>家務設備說明書資料庫</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f9; }
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; padding: 20px; background: #f4f4f9; color: #333; }
         h1 { color: #333; text-align: center; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { max-width: 600px; margin: auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        a { text-decoration: none; color: #007aff; font-size: 18px; display: block; }
+        li { margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        
+        /* 連結容器：確保圖示與文字水平對齊 */
+        a { 
+            text-decoration: none; 
+            color: #007aff; 
+            font-size: 18px; 
+            display: flex; 
+            align-items: center; 
+            transition: 0.2s;
+        }
         a:hover { color: #0056b3; }
-        .category { font-weight: bold; color: #666; font-size: 14px; margin-top: 15px; }
+
+        /* 圖示專用樣式 */
+        .dev-icon {
+            width: 30px;      /* 設定統一寬度 */
+            height: 30px;     /* 設定統一高度 */
+            margin-right: 12px; /* 圖示與文字的間距 */
+            object-fit: contain; /* 確保圖片比例正常，不被擠壓 */
+        }
+
+        .category { font-weight: bold; color: #888; font-size: 13px; margin-top: 20px; text-transform: uppercase; border-left: 4px solid #007aff; padding-left: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>設備說明書</h1>
         
-        <div class="category">客廳</div>
+        <div class="category">リビング</div>
         <ul>
-            <li><a href="tv_manual.pdf">📺 電視</a></li>
-            <li><a href="ac_living_manual.pdf">❄️ 冷氣 (客廳)</a></li>
+            <li><a href="tv_manual.pdf"><img src="icon_tv.png" class="dev-icon" alt=""> テレビ</a></li>
+            <li><a href="ac_living_manual.pdf"><img src="icon_ac.png" class="dev-icon" alt=""> エアコン</a></li>
         </ul>
 
-        <div class="category">廚房</div>
+        <div class="category">寝室</div>
         <ul>
-            <li><a href="refrigerator_manual.pdf">🧊 冰箱</a></li>
-            <li><a href="dishwasher_manual.pdf">🍽️ 洗碗機</a></li>
+            <li><a href="xxx_manual.pdf"><img src="icon_xxx.png" class="dev-icon" alt=""> xxx</a></li>
         </ul>
 
-        <div class="category">其他</div>
+        <div class="category">仕事部屋</div>
         <ul>
-            <li><a href="washer_manual.pdf">🧺 洗衣機</a></li>
+            <li><a href="xxx_manual.pdf"><img src="icon_xxx.png" class="dev-icon" alt=""> xxx</a></li>
+        </ul>
+
+        <div class="category">キッチン</div>
+        <ul>
+            <li><a href="refrigerator_manual.pdf"><img src="icon_fridge.png" class="dev-icon" alt=""> 冷凍冷蔵庫</a></li>
+            <li><a href="dishwasher_manual.pdf"><img src="icon_dishwasher.png" class="dev-icon" alt=""> 食器洗浄乾燥機</a></li>
+        </ul>
+
+        <div class="category">浴室</div>
+        <ul>
+            <li><a href="washer_manual.pdf"><img src="icon_washer.png" class="dev-icon" alt=""> 洗濯機</a></li>
+            <li><a href="xxx_manual.pdf"><img src="icon_heater.png" class="dev-icon" alt=""> 浴室暖房乾燥機</a></li>
+        </ul>
+        
+        <div class="category">トイレ</div>
+        <ul>
+            <li><a href="washlet_manual.pdf"><img src="icon_toilet.png" class="dev-icon" alt=""> ウォシュレット</a></li>
         </ul>
     </div>
 </body>
